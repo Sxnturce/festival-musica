@@ -1,0 +1,41 @@
+@use "vars/variables" as v;
+@use "vars/mixins" as mx;
+
+.header {
+	width: 100%;
+	background-color: v.$verde;
+	.contenedor-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2rem;
+		gap: 1.2rem;
+		@include mx.tablet {
+			flex-direction: column;
+			gap: 2.3rem;
+		}
+		& > h1 {
+			margin: 0;
+			font-size: 3.5rem;
+			color: v.$blanco;
+			@include mx.tablet {
+				text-align: center;
+			}
+		}
+		.navegacion-principal {
+			display: flex;
+			gap: 2rem;
+			@include mx.tablet {
+				flex-direction: column;
+			}
+			& > a {
+				color: v.$blanco;
+				font-size: 1.2em;
+				transition: color 0.3s ease-in-out;
+				&:hover {
+					color: v.$amarillo;
+				}
+			}
+		}
+	}
+}

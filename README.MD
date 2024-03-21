@@ -1,0 +1,4 @@
+- [ ] Terminar la estructura HTML
+- [ ] Añadirle SCSS
+- [ ] Usar JavaScript para la funcionalidad
+- [ ] Terminar el curso de scss
