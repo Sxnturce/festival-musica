@@ -6,7 +6,8 @@
   "scripts": {
     "sass": "sass --watch src/scss:build/css",
     "tarea": "gulp tarea",
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "webp": "gulp versionWebp"
   },
   "keywords": [
     "SASS",
@@ -16,8 +17,10 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^5.1.0",
+    "gulp-webp": "^4.0.1",
     "sass": "^1.72.0"
   }
 }
