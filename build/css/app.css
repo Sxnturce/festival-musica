@@ -366,7 +366,7 @@ h3 {
 
 .header {
   width: 100%;
-  background-color: #4cb8b3;
+  background-color: #1f1e1e;
 }
 .header .contenedor-header {
   display: flex;
@@ -425,8 +425,8 @@ h3 {
   align-items: center;
   position: absolute;
   inset: 0;
-  background: rgba(142, 91, 193, 0.5882352941);
-  background: linear-gradient(172deg, rgba(98, 49, 146, 0.4431372549) 0%, rgba(152, 68, 185, 0.6784313725) 77%);
+  background: rgba(32, 32, 32, 0.5882352941);
+  background: linear-gradient(172deg, rgba(11, 11, 12, 0.4431372549) 0%, rgba(152, 68, 185, 0.6784313725) 77%);
   z-index: 1;
 }
 .video .video__bg .video__text {
@@ -465,8 +465,8 @@ h3 {
 
 .about {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(450px, 100%), 1fr));
   gap: 4.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 450px), 1fr));
   padding: 1.5rem;
 }
 @media screen and (width <= 480px) {

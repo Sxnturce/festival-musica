@@ -10,6 +10,7 @@ const plumber = require("gulp-plumber")
 /* const cache = require("gulp-cache") */
 const webp = require("gulp-webp")
 const imgmin = require("gulp-imagemin")
+const avif = require("gulp-avif")
 
 function css(cb) {
     src("src/scss/**/*.scss")//Importar el aarchivo sass
@@ -39,6 +40,16 @@ function versionWebp(cb) {
     cb()
 }
 
+function versionAvif(cb) {
+    const options = {
+        quality: 50
+    };
+    src('src/img/**/*.{png,jpg}')
+        .pipe(avif(options))
+        .pipe(dest("build/img"))
+    cb()
+}
+
 function dev(cb) {
     watch("src/scss/**/*.scss", css)
     cb();
@@ -46,5 +57,6 @@ function dev(cb) {
 
 exports.css = css
 exports.versionWebp = versionWebp
+exports.versionAvif = versionAvif
 exports.imgMin = imgMin
-exports.dev = parallel(imgMin, versionWebp, dev)
+exports.dev = parallel(imgMin, versionAvif, versionWebp, dev)
