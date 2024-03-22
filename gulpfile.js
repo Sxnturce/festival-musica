@@ -7,8 +7,9 @@ const sass = require('gulp-sass')(require('sass'));
 const plumber = require("gulp-plumber")
 
 //Imagenes
-
+/* const cache = require("gulp-cache") */
 const webp = require("gulp-webp")
+const imgmin = require("gulp-imagemin")
 
 function css(cb) {
     src("src/scss/**/*.scss")//Importar el aarchivo sass
@@ -18,6 +19,15 @@ function css(cb) {
     cb();
 }
 
+function imgMin(cb) {
+    const options = {
+        optimizationLevel: 3
+    }
+    src('src/img/**/*.{png,jpg}')
+        .pipe(imgmin(options))
+        .pipe(dest("build/img"))
+    cb()
+}
 
 function versionWebp(cb) {
     const options = {
@@ -36,4 +46,5 @@ function dev(cb) {
 
 exports.css = css
 exports.versionWebp = versionWebp
-exports.dev = parallel(versionWebp, dev)
+exports.imgMin = imgMin
+exports.dev = parallel(imgMin, versionWebp, dev)
