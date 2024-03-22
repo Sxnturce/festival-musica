@@ -1,0 +1,38 @@
+@use "vars/variables" as v;
+@use "vars/mixins" as mx;
+
+.about {
+	display: grid;
+	gap: 4.5rem;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 450px), 1fr));
+	padding: 1.5rem;
+	@include mx.mobile {
+		padding: 1rem;
+	}
+	.about__img {
+		img {
+			width: 100%;
+		}
+	}
+	.about__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		@include mx.desktop {
+			text-align: center;
+		}
+		h2 {
+			margin: 0;
+			font-size: clamp(2.8rem, 4vw, 3.6rem);
+		}
+		p {
+			color: v.$rosa;
+			font-weight: bold;
+			font-size: clamp(1.8rem, 4vw, 2rem);
+		}
+		.text__content {
+			color: initial;
+			font-weight: normal;
+		}
+	}
+}
