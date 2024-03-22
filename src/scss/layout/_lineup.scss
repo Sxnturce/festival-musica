@@ -1,0 +1,84 @@
+@use "vars/variables" as v;
+@use "vars/mixins" as mx;
+
+.lineup {
+	display: flex;
+	flex-direction: column;
+	background-color: v.$rosa;
+	padding: 3rem;
+	gap: 3.5rem;
+	& > :where(h2, p) {
+		text-align: center;
+		color: white;
+	}
+	& > h2 {
+		margin: 0;
+	}
+	.lineup__cards {
+		@include mx.grid(380px, 4rem);
+		&:nth-of-type(1) {
+			.card {
+				&:nth-of-type(2n -1) {
+					background-color: v.$amarillo;
+					.item__hour {
+						&:nth-of-type(2n -1) {
+							background-color: #ddda164f;
+						}
+					}
+				}
+				&:nth-of-type(2n) {
+					background-color: v.$verde;
+					.item__hour {
+						&:nth-of-type(2n -1) {
+							background-color: #187a5a59;
+						}
+					}
+				}
+			}
+		}
+		&:nth-of-type(2) {
+			.card {
+				&:nth-of-type(2n) {
+					background-color: v.$amarillo;
+					.item__hour {
+						&:nth-of-type(2n -1) {
+							background-color: #ddda164f;
+						}
+					}
+				}
+				&:nth-of-type(2n -1) {
+					background-color: v.$verde;
+					.item__hour {
+						&:nth-of-type(2n -1) {
+							background-color: #187a5a59;
+						}
+					}
+				}
+			}
+		}
+		.card {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 1.8rem 0;
+			gap: 3rem;
+			& > h3 {
+				margin: 0;
+			}
+			img {
+				width: 100%;
+				max-width: 150px;
+			}
+			.card__hours {
+				width: 100%;
+				.item__hour {
+					padding: 1.8rem;
+					font-size: 1.7rem;
+					span {
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+}

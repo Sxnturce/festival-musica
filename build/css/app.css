@@ -366,7 +366,7 @@ h3 {
 
 .header {
   width: 100%;
-  background-color: #1f1e1e;
+  background-color: #222222;
 }
 .header .contenedor-header {
   display: flex;
@@ -499,4 +499,72 @@ h3 {
 .about .about__text .text__content {
   color: initial;
   font-weight: normal;
+}
+
+.lineup {
+  display: flex;
+  flex-direction: column;
+  background-color: #f43756;
+  padding: 3rem;
+  gap: 3.5rem;
+}
+.lineup > :where(h2, p) {
+  text-align: center;
+  color: white;
+}
+.lineup > h2 {
+  margin: 0;
+}
+.lineup .lineup__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(380px, 100%), 1fr));
+  gap: 4rem;
+}
+.lineup .lineup__cards:nth-of-type(1) .card:nth-of-type(2n -1) {
+  background-color: #fef46d;
+}
+.lineup .lineup__cards:nth-of-type(1) .card:nth-of-type(2n -1) .item__hour:nth-of-type(2n -1) {
+  background-color: rgba(221, 218, 22, 0.3098039216);
+}
+.lineup .lineup__cards:nth-of-type(1) .card:nth-of-type(2n) {
+  background-color: #4cb8b3;
+}
+.lineup .lineup__cards:nth-of-type(1) .card:nth-of-type(2n) .item__hour:nth-of-type(2n -1) {
+  background-color: rgba(24, 122, 90, 0.3490196078);
+}
+.lineup .lineup__cards:nth-of-type(2) .card:nth-of-type(2n) {
+  background-color: #fef46d;
+}
+.lineup .lineup__cards:nth-of-type(2) .card:nth-of-type(2n) .item__hour:nth-of-type(2n -1) {
+  background-color: rgba(221, 218, 22, 0.3098039216);
+}
+.lineup .lineup__cards:nth-of-type(2) .card:nth-of-type(2n -1) {
+  background-color: #4cb8b3;
+}
+.lineup .lineup__cards:nth-of-type(2) .card:nth-of-type(2n -1) .item__hour:nth-of-type(2n -1) {
+  background-color: rgba(24, 122, 90, 0.3490196078);
+}
+.lineup .lineup__cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.8rem 0;
+  gap: 3rem;
+}
+.lineup .lineup__cards .card > h3 {
+  margin: 0;
+}
+.lineup .lineup__cards .card img {
+  width: 100%;
+  max-width: 150px;
+}
+.lineup .lineup__cards .card .card__hours {
+  width: 100%;
+}
+.lineup .lineup__cards .card .card__hours .item__hour {
+  padding: 1.8rem;
+  font-size: 1.7rem;
+}
+.lineup .lineup__cards .card .card__hours .item__hour span {
+  font-weight: bold;
 }
