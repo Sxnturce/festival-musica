@@ -1,0 +1,50 @@
+@use "vars/variables" as v;
+@use "vars/mixins" as mx;
+
+.gallery {
+	& > h2 {
+		text-align: center;
+	}
+	.gallery__img {
+		@include mx.grid(160px, 2rem);
+		.item__img {
+			img {
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+.no-overflow {
+	overflow: hidden;
+}
+.active {
+	position: fixed;
+	inset: 0;
+	display: flex;
+	z-index: 99;
+	justify-content: center;
+	align-items: center;
+	background-color: #1a1a1ada;
+}
+
+.animation-img {
+	transform-origin: center;
+	position: absolute;
+	animation: img-animation 0.3s ease;
+	width: 80%;
+	max-width: 800px;
+	object-fit: contain;
+}
+
+@keyframes img-animation {
+	from {
+		transform: scale(0.1);
+		filter: opacity(0);
+	}
+	to {
+		transform: scale(1);
+		filter: opacity(1);
+	}
+}
