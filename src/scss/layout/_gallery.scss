@@ -26,13 +26,13 @@
 	z-index: 99;
 	justify-content: center;
 	align-items: center;
-	background-color: #1a1a1ada;
+	background-color: #1d1d1df1;
 }
 
 .animation-img {
 	transform-origin: center;
 	position: absolute;
-	animation: img-animation 0.3s ease;
+	animation: img-animation 0.45s ease;
 	width: 80%;
 	max-width: 800px;
 	object-fit: contain;
@@ -40,11 +40,11 @@
 
 @keyframes img-animation {
 	from {
-		transform: scale(0.1);
+		transform: scale(0) rotate(90deg);
 		filter: opacity(0);
 	}
 	to {
-		transform: scale(1);
+		transform: scale(1) rotate(0);
 		filter: opacity(1);
 	}
 }
