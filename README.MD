@@ -1,4 +1,4 @@
-- [ ] Terminar la estructura HTML
-- [ ] Añadirle SCSS
-- [ ] Usar JavaScript para la funcionalidad
-- [ ] Terminar el curso de scss
+- [x] Terminar la estructura HTML
+- [x] Añadirle SCSS
+- [x] Usar JavaScript para la funcionalidad
+- [x] Terminar la landing page
