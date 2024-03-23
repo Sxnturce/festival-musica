@@ -5,6 +5,9 @@ const sass = require('gulp-sass')(require('sass'));
 
 //Errores
 const plumber = require("gulp-plumber")
+/* const autoprefixer = require("autoprefixer")
+const cssnano = require("cssnano")
+const postcss = require("postcss") */
 
 //Imagenes
 /* const cache = require("gulp-cache") */

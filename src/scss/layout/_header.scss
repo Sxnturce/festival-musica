@@ -6,6 +6,7 @@
 	background-color: v.$headerbg;
 	position: fixed;
 	z-index: 2;
+	transition: transform 0.3s ease-in-out;
 	.contenedor-header {
 		display: flex;
 		justify-content: space-between;
@@ -16,14 +17,17 @@
 			flex-direction: column;
 			gap: 2.3rem;
 		}
-		& > h1 {
-			margin: 0;
-			font-size: 3.5rem;
-			color: v.$blanco;
-			@include mx.tablet {
-				text-align: center;
+		a {
+			h1 {
+				margin: 0;
+				font-size: 3.5rem;
+				color: v.$blanco;
+				@include mx.tablet {
+					text-align: center;
+				}
 			}
 		}
+
 		.navegacion-principal {
 			display: flex;
 			gap: 2rem;
@@ -40,4 +44,12 @@
 			}
 		}
 	}
+}
+
+.hidden {
+	transform: translateY(-100%);
+}
+
+.static {
+	position: static;
 }

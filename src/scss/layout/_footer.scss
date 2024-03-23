@@ -1,0 +1,16 @@
+@use "vars/variables" as v;
+@use "vars/mixins" as mx;
+
+.footer {
+	background-color: v.$headerbg;
+	padding: 2rem;
+	margin-top: 3.5rem;
+	.footer__container {
+		p {
+			margin: 0;
+			text-align: center;
+			color: v.$blanco;
+			font-weight: bold;
+		}
+	}
+}
