@@ -4,6 +4,8 @@
 .header {
 	width: 100%;
 	background-color: v.$headerbg;
+	position: fixed;
+	z-index: 2;
 	.contenedor-header {
 		display: flex;
 		justify-content: space-between;

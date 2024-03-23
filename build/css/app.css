@@ -367,6 +367,8 @@ h3 {
 .header {
   width: 100%;
   background-color: #222222;
+  position: fixed;
+  z-index: 2;
 }
 .header .contenedor-header {
   display: flex;
@@ -508,6 +510,11 @@ h3 {
   padding: 3rem;
   gap: 3.5rem;
 }
+@media screen and (width <= 600px) {
+  .lineup {
+    padding: 3rem 0rem;
+  }
+}
 .lineup > :where(h2, p) {
   text-align: center;
   color: white;
@@ -584,6 +591,7 @@ h3 {
 
 .no-overflow {
   overflow: hidden;
+  padding-right: 15px;
 }
 
 .active {
@@ -599,7 +607,7 @@ h3 {
 .animation-img {
   transform-origin: center;
   position: absolute;
-  animation: img-animation 0.45s ease;
+  animation: img-animation 0.4s ease;
   width: 80%;
   max-width: 800px;
   object-fit: contain;

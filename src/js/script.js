@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <picture class="item__img">
         <source srcset='./build/img/thumb/${i}.avif' type='image/avif'>
         <source srcset='./build/img/thumb/${i}.webp' type='image/webp'>
-        <img loading='lazy' src='./build/img/thumb/${i}.jpg' alt='' class="img">
+        <img loading='lazy' src='./build/img/grande/${i}.jpg' alt='' class="img">
     </picture>
     `
         gallery.appendChild(div)

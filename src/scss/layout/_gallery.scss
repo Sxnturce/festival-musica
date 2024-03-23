@@ -18,6 +18,7 @@
 
 .no-overflow {
 	overflow: hidden;
+	padding-right: 15px;
 }
 .active {
 	position: fixed;
@@ -32,7 +33,7 @@
 .animation-img {
 	transform-origin: center;
 	position: absolute;
-	animation: img-animation 0.45s ease;
+	animation: img-animation 0.4s ease;
 	width: 80%;
 	max-width: 800px;
 	object-fit: contain;
